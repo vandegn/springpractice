@@ -35,7 +35,8 @@ public class MemberController {
     }
 
     @PutMapping("/members/{id}")
-    public void setId(@PathVariable Long id, @RequestBody Member member) {
+    public Member setId(@PathVariable Long id, @RequestBody Member member) {
         member.setId(id);
+        return memberService.save(member);
     }
 }
