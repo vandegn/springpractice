@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Members</h1>
-<table id="memberTable" border="1">
+<table id="memberTable" border="1" class="table">
     <thead>
     <tr><th>ID</th><th>Name</th><th>Hire Date</th><th>Salary</th><th>Rate</th></tr>
     </thead>
@@ -15,21 +15,20 @@
 
 <h2>Add Member</h2>
 <form id="add-member">
-    <div class="form-group">
-        <input type="text" id="NAME" placeholder="Name">
+    <div class="mb-3">
+        <input type="text" id="NAME" class="form-control" placeholder="Name">
     </div>
-    <div class="form-group">
-        <input type="date" id="hireDate">
+    <div class="mb-3">
+        <input type="date" id="hireDate" class="form-control">
     </div>
-    <div class="form-group">
-        <input type="number" id="salary" placeholder="Salary">
+    <div class="mb-3">
+        <input type="number" id="salary" class="form-control" placeholder="Salary">
     </div>
-    <div class="form-group">
-        <input type="number" id="contributionRate" placeholder="Rate" step="0.01">
+    <div class="mb-3">
+        <input type="number" id="contributionRate" class="form-control" step="0.01">
     </div>
     <button id="submit-btn" class="btn btn-primary">Add Member</button>
 </form>
-
 
 <script src="script.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
