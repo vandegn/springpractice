@@ -1,11 +1,22 @@
 package com.practice.demo;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDate;
-
+// telling spring to map this java class to a db table
+@Entity
 public class Member {
+    // telling spring to use this ID as the primary key for jpa
+    @Id
+    // this will assign id's automatically similar to the ++nextId used in the
+    // hashmap implementation.
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private LocalDate hireDate;
